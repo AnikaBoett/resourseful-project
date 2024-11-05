@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class=reviewsHero>
+        <div class="heroText">
+            <h1>Media Reviews</h1>
+        </div>
+    </div>
+    <h2 id="leaveReview">Leave a Review</h2>
+    <div id="bodyContent">
+        <div class="reviewForm">
+            <div id="mediaDate">
+                <p>Date</p>
+                <input type="date" id="inputDate">
+            </div>
+            <div id="mediaTitle">
+                <p>Title</p>
+                <input id="inputMediaTitle" type="text" placeholder="Title...">
+            </div>
+            <div id="mediaType">
+                <p>Media Type</p>
+                <select name="media-type" id="media-type">
+                    <option value="tv-show">TV Show</option>
+                    <option value="movie">Movie</option>
+                    <option value="book">Book</option>
+                    <option value="video-game">Video Game</option>
+                    <option value="album">Album</option>
+                </select>
+            </div>
+            <div id="ratingScore">
+                <p>Rating</p>
+                <div>
+                    <input type="range" min="1" max="10" class="slider" id="ratingScoreInput">
+                </div>
+            </div>
+            <div id="mediaReview">
+                <p>Review</p>
+                <input type="text" id="input-review" placeholder="What did you think?">
+                <button id="submit-review-button">Submit</button>
+            </div>
+        </div>
+        <hr>
+        <div id="reviewRows">
+            <h2>Reviews</h2>
+            <div id="reviewList">
+
+            </div>
+        </div>
+
+        <div id="editReviewModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Edit Review</h2>
+                <form id="editReviewForm">
+                    <div>
+                        <p>Date</p>
+                        <input type="date" id="editDate">
+                    </div>
+                    <div>
+                        <p>Title</p>
+                        <input id="editTitle" type="text">
+                    </div>
+                    <div>
+                        <p>Media Type</p>
+                        <select name="media-type" id="editMedium">
+                            <option value="tv-show">TV Show</option>
+                            <option value="movie">Movie</option>
+                            <option value="book">Book</option>
+                            <option value="video-game">Video Game</option>
+                            <option value="album">Album</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p>Rating</p>
+                        <div class="slider">
+                            <input type="range" min="1" max="10" class="slider" id="editRating">
+                        </div>
+                    </div>
+                    <div>
+                        <p>Review</p>
+                        <input type="text" id="editReview" placeholder="What did you think?">
+                        <button id="edit-review-submit">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
