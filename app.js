@@ -66,7 +66,7 @@ function addReview(data) {
 }
 
 async function loadMediaFromServer() {
-    fetch("http://localhost:8081/reviews")
+    fetch(`${apiURL}/reviews`)
         .then(function(response) {
             response.json()
                 .then(function(data) {
@@ -96,7 +96,7 @@ async function addNewReview() {
     encodedData += "&review=" + encodeURIComponent(mediaReview.value);
 
     
-    fetch("http://localhost:8081/reviews", {
+    fetch(`${apiURL}/reviews`, {
         method: "POST",
         body: encodedData,
         headers: {
@@ -144,7 +144,7 @@ document.getElementById("editReviewForm").onsubmit = async function(event) {
     encodedData += "&rating=" + encodeURIComponent(updatedRating);
     encodedData += "&review=" + encodeURIComponent(updatedReview);
 
-    fetch(`http://localhost:8081/reviews/${currentReviewId}` ,
+    fetch(`apiURL/reviews/${currentReviewId}` ,
         {
             method: "PUT", 
             body: encodedData,
@@ -158,7 +158,7 @@ document.getElementById("editReviewForm").onsubmit = async function(event) {
 
 async function deleteReview(id) {
     console.log("review id: ", id)
-    fetch(`http://localhost:8081/reviews/${id}` ,
+    fetch(`${apiURL}/reviews/${id}` ,
         {
             method: "DELETE", 
             headers: {
