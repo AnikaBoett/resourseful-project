@@ -69,7 +69,7 @@ def delete_review(review_id):
 
 def run():
     print("Server is running on port 8081")
-    app.run(port=8081, debug=True)
+    app.run(port=8081, debug=True, host='0.0.0.0')
 
 if __name__ == "__main__":
-    app.run(port=8081)
+    run()

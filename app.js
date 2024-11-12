@@ -1,5 +1,7 @@
 console.log("connected");
-const URL = "http://localhost:8081"
+const apiURL = window.location.protocol === 'file:'
+    ? 'http://localhost:8081' // Local API server during development
+    : ''; //Production API
 
 let submitButton = document.getElementById("submit-review-button");
 let currentReviewId = null;
