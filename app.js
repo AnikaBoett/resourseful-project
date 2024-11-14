@@ -104,7 +104,7 @@ async function addNewReview() {
         }
     }).then(function(response){
         console.log("new review created!", response)
-        addReview({ title: reviewtitle, date: watchedDate, medium: reviewMedium, rating: reviewRating, review: mediaReview});
+        addReview({ title: reviewTitle, date: watchedDate, medium: reviewMedium, rating: reviewRating, review: mediaReview});
     })
 }
 
