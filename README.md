@@ -3,7 +3,7 @@
 
 Webpage that allows users to review different shows and movies they've seen. This project uses RESTful API to allow for review posting, updating, and deleting. It uses Javascript, HTML/CSS, and Python/Flask.
 
-![Review Webpage](images/mediareviews)
+![Review Webpage](images/mediareviews.png)
 
 Attributes
 - Title
